@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YeJ-KU-QtE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Wifi Devices-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SocketCommunication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KCi-zp-wz2">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WifiDeviceListTableViewCell" id="Hts-Yw-SVB" customClass="WifiDeviceListTableViewCell" customModule="SocketCommunication" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hts-Yw-SVB" id="22p-5P-g1N">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYd-x7-Qt7">
+                                                    <rect key="frame" x="20" y="5" width="335" height="33.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33.5" id="7Pq-oE-xG8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZYd-x7-Qt7" firstAttribute="leading" secondItem="22p-5P-g1N" secondAttribute="leading" constant="20" id="0J5-CK-8rO"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZYd-x7-Qt7" secondAttribute="bottom" constant="5" id="ICS-1K-Be5"/>
+                                                <constraint firstItem="ZYd-x7-Qt7" firstAttribute="centerY" secondItem="22p-5P-g1N" secondAttribute="centerY" id="RQ9-cG-BLv"/>
+                                                <constraint firstItem="ZYd-x7-Qt7" firstAttribute="centerX" secondItem="22p-5P-g1N" secondAttribute="centerX" id="eud-ae-heG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="deviceName" destination="ZYd-x7-Qt7" id="ruj-hH-bDC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="0hm-MP-6sj"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ibk-Yd-3Lf"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KCi-zp-wz2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2xB-ux-HUN"/>
+                            <constraint firstItem="KCi-zp-wz2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="D0p-cb-HGM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KCi-zp-wz2" secondAttribute="bottom" id="Mwa-b6-LsJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KCi-zp-wz2" secondAttribute="trailing" id="Rda-eP-Six"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Wifi Devices" id="x2z-EI-hDS"/>
+                    <connections>
+                        <outlet property="wifiDeivceListTableView" destination="KCi-zp-wz2" id="g41-fC-7PO"/>
+                        <segue destination="2Tt-ys-JhS" kind="show" identifier="toMessageViewController" id="acU-o0-C3P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="777"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jDN-AF-zCJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YeJ-KU-QtE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="drT-5B-DLg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1Af-b8-1GD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FEL-Dj-l1r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="148" y="776.76161919040487"/>
+        </scene>
+        <!--Peer Communication-->
+        <scene sceneID="yTM-eO-vjq">
+            <objects>
+                <viewController id="2Tt-ys-JhS" customClass="MessageViewController" customModule="SocketCommunication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pxx-GS-2Bw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vG3-B1-hzZ">
+                                <rect key="frame" x="20" y="260.5" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="oeF-CG-FSf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                </variation>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GQs-3u-y40">
+                                <rect key="frame" x="20" y="310.5" width="335" height="110"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Z4-ez-pm4">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        </variation>
+                                    </textField>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqZ-Yy-tPw">
+                                        <rect key="frame" x="0.0" y="40" width="335" height="30"/>
+                                        <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="Send">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="sendButtonClicked:" destination="2Tt-ys-JhS" eventType="touchUpInside" id="AwP-Da-i07"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dav-lK-5g0">
+                                        <rect key="frame" x="0.0" y="80" width="335" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GQs-3u-y40" firstAttribute="top" secondItem="vG3-B1-hzZ" secondAttribute="bottom" constant="20" id="65Y-Cj-Xa0"/>
+                            <constraint firstItem="vG3-B1-hzZ" firstAttribute="centerX" secondItem="In1-p6-8bc" secondAttribute="centerX" id="AV0-dw-L5P"/>
+                            <constraint firstItem="GQs-3u-y40" firstAttribute="centerX" secondItem="In1-p6-8bc" secondAttribute="centerX" id="ICD-4S-3XG"/>
+                            <constraint firstItem="GQs-3u-y40" firstAttribute="centerY" secondItem="In1-p6-8bc" secondAttribute="centerY" id="gOe-Gm-AIT"/>
+                            <constraint firstItem="GQs-3u-y40" firstAttribute="leading" secondItem="In1-p6-8bc" secondAttribute="leading" constant="20" id="szz-ic-N2t"/>
+                            <constraint firstItem="vG3-B1-hzZ" firstAttribute="leading" secondItem="In1-p6-8bc" secondAttribute="leading" constant="20" id="vd0-sh-mQg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="In1-p6-8bc"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Peer Communication" id="eNQ-FE-SZ1"/>
+                    <connections>
+                        <outlet property="connectionsLabel" destination="vG3-B1-hzZ" id="ft3-hA-roL"/>
+                        <outlet property="dataDisplayLabel" destination="Dav-lK-5g0" id="b9w-nd-O7h"/>
+                        <outlet property="dataTextField" destination="2Z4-ez-pm4" id="H40-qs-Ueq"/>
+                        <outlet property="sendButton" destination="xqZ-Yy-tPw" id="hWB-8Z-FcM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5k7-yj-PbO" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1607" y="777"/>
+        </scene>
+    </scenes>
+</document>
